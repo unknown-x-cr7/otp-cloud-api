@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OTP Cloud API</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <nav class="nav"><a class="brand" href="/"><span class="logo">O</span> OTP Cloud</a><span class="pill"><i></i> API operational</span></nav>
+  <main class="hero">
+    <div class="eyebrow">DEVELOPER-FIRST VERIFICATION</div>
+    <h1>Phone verification,<br><span>made dependable.</span></h1>
+    <p class="lead">A secure OTP REST API for your apps, websites and customer workflows, powered by Twilio Verify.</p>
+    <div class="actions"><a class="btn primary" href="#docs">Explore API <span>↗</span></a><a class="btn ghost" href="/health">Health check</a></div>
+    <section class="stats"><div><strong>REST</strong><small>JSON endpoints</small></div><div><strong>API keys</strong><small>Per-customer access</small></div><div><strong>Verify</strong><small>Provider-managed OTP</small></div></section>
+    <section class="docs" id="docs"><div class="section-top"><div><div class="eyebrow">QUICK START</div><h2>Two endpoints. One workflow.</h2></div><span class="tag">v1</span></div>
+      <article class="endpoint"><div class="endpoint-title"><b class="method post">POST</b><code>/v1/otp/send</code><span>Send a code</span></div><pre><code>curl -X POST https://YOUR-DOMAIN/v1/otp/send \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"phone":"+8801XXXXXXXXX"}'</code></pre></article>
+      <article class="endpoint"><div class="endpoint-title"><b class="method post">POST</b><code>/v1/otp/verify</code><span>Verify a code</span></div><pre><code>curl -X POST https://YOUR-DOMAIN/v1/otp/verify \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"phone":"+8801XXXXXXXXX","code":"123456"}'</code></pre></article>
+      <p class="note">API keys are issued by the service operator and must be kept on your server, never embedded in a public browser app. Only send OTPs to people who requested verification.</p>
+    </section>
+  </main>
+  <footer>OTP Cloud API · Protect your users. Verify responsibly.</footer>
+</body></html>
